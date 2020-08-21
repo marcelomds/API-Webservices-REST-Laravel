@@ -72,7 +72,12 @@ class ProductController extends Controller
         if (!$product = $this->product->find($id))
             return response()->json(['error' => 'Not Found'], 404);
 
-        return response()->json($product, 200);
+        $category = $product->category;
+
+        return response()->json([
+            'product' => $product,
+            'category' => $category
+        ], 200);
     }
 
     /**

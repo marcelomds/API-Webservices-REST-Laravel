@@ -15,6 +15,7 @@ class CategoryController extends Controller
      * @var Category
      */
     private Category $category;
+    private $totalPage = 5;
 
     /**
      * CategoryController constructor.
@@ -88,5 +89,23 @@ class CategoryController extends Controller
         $category->delete();
 
         return response()->json(['success' => true], 204);
+    }
+
+    /**
+     * @param $id
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function products($id)
+    {
+        if (!$category = $this->category->find($id))
+            return response()->json(['error' => 'Not Found'], 404);
+
+        $products = $category->products()->paginate($this->totalPage);
+
+        return response()->json([
+            'category' => $category,
+            'products' => $products
+        ]);
+
     }
 }

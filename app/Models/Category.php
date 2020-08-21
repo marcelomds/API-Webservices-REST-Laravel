@@ -19,4 +19,12 @@ class Category extends Model
 
        return $this->where('name', 'LIKE', "%{$name}%")->get();
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
 }

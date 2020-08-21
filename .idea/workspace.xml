@@ -125,12 +125,13 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/lang" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="Laravel.SettingsForm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/lang" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -152,7 +153,7 @@
       <workItem from="1597608273936" duration="135000" />
       <workItem from="1597882983976" duration="3060000" />
       <workItem from="1597886765095" duration="1173000" />
-      <workItem from="1597923660114" duration="15524000" />
+      <workItem from="1597923660114" duration="23101000" />
     </task>
     <servers />
   </component>
