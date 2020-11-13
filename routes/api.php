@@ -17,12 +17,12 @@ Route::namespace('Api\v1')->group(function () {
          * Rota de Categorias
          */
         Route::get('categories/{id}/products', 'CategoryController@products');
-        Route::apiResource('categorias', 'CategoryController');
+        Route::apiResource('categories', 'CategoryController');
 
         /**
          * Rota de Produtos
          */
-        Route::apiResource('produtos', 'ProductController');
+        Route::apiResource('products', 'ProductController');
 
     });
 });
