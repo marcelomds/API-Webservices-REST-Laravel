@@ -24,7 +24,8 @@
                 <select class="form-control" v-model="product.category_id">
                     <option value="">Selecione a Categoria</option>
                     <option v-for="category in categories"
-                            :key="category.id" :value="category.id">{{ category.name }}
+                            :key="category.id"
+                            :value="category.id">{{ category.name }}
                     </option>
                 </select>
             </div>

@@ -7,10 +7,23 @@ import EditCategoryComponent from "../components/admin/pages/categories/EditCate
 import DashboardComponent from "../components/admin/pages/dashboard/DashboardComponent";
 import AdminComponent from "../components/admin/AdminComponent";
 import ProductsComponent from "../components/admin/pages/products/ProductsComponent";
+import HomeComponent from "../components/frontend/pages/home/HomeComponent";
+import SiteComponent from "../components/frontend/SiteComponent";
+import ContactComponent from "../components/frontend/pages/contact/ContactComponent";
+import ProductDetail from "../components/frontend/pages/product/ProductDetail";
 
 Vue.use(VueRouter);
 
 const routes = [
+    {
+        path: '/',
+        component: SiteComponent,
+        children: [
+            { path: '', component: HomeComponent, name: 'home' },
+            { path: '/contact', component: ContactComponent, name: 'contact' },
+            { path: 'prooduct/:id', component: ProductDetail, name: 'product.detail', props: true },
+        ]
+    },
     {
         path: '/admin',
         component: AdminComponent,

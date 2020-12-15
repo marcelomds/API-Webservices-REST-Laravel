@@ -2,7 +2,9 @@
     <div>
         <form @submit.prevent="onSubmit">
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Nome da Categoria" v-model="category.name">
+                <input type="text"
+                       class="form-control"
+                       placeholder="Nome da Categoria" v-model="category.name">
             </div>
 
             <div class="form-group">
